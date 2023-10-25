@@ -3,7 +3,6 @@ import { type Locator, type Page, expect } from '@playwright/test';
 export class HomePageObjects {
   readonly page: Page;
   readonly getStartedButton: Locator;
-  readonly title: RegExp;
 
   constructor(page: Page) {
     this.page = page;

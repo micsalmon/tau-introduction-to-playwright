@@ -2,7 +2,6 @@ import { type Locator, type Page, expect } from '@playwright/test';
 
 export class GlobalObjects {
   readonly page: Page;
-  readonly url: string;
 
   constructor(page: Page) {
     this.page = page;
