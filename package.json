@@ -10,7 +10,8 @@
     "test:e2e:dev": "npx playwright test tests-examples/ --project=chromium --headed --retries=0 --reporter=line",
     "test:smoke": "npx playwright test tests-examples/ --grep @smoke --project=chromium",
     "test:non-smoke": "npx playwright test tests-examples/ --grep-invert @smoke --project=firefox",
-    "example": "npx playwright test tests/example.spec.ts"
+    "example": "npx playwright test tests/example.spec.ts",
+    "example2": "npx playwright test tests/example2.spec.ts"
   },
   "keywords": [],
   "author": "",
