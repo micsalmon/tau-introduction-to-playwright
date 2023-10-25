@@ -14,6 +14,10 @@ export class GlobalObjects {
   async verifyUrl(url: RegExp) {
     await expect(this.page).toHaveURL(url);
   }
+
+  async waitForLoad(wait: number) {
+    await this.page.waitForTimeout(wait);
+  }
 }
 
 export default GlobalObjects;
