@@ -1,4 +1,4 @@
-import { type Locator, type Page, expect } from '@playwright/test';
+import { type Page, expect } from '@playwright/test';
 
 export class GlobalObjects {
   readonly page: Page;
@@ -13,6 +13,10 @@ export class GlobalObjects {
 
   async verifyUrl(url: RegExp) {
     await expect(this.page).toHaveURL(url);
+  }
+
+  async waitForLoad(wait: number) {
+    await this.page.waitForTimeout(wait);
   }
 }
 

@@ -27,7 +27,7 @@ test.describe('Playwright Website', () => {
     await global.verifyUrl(/.*intro/);
   });
 
-  test('check Java page', async ({ page }) => {
+  test('check Java page', async () => {
     await home.getStartedButton.click();
     await header.langDropdown.hover();
     await header.selectLangOption('Java').click();
@@ -37,8 +37,11 @@ test.describe('Playwright Website', () => {
     await expect(intro.isVisibleText).toBeVisible();
   });
 
-  test.skip('go to calendar', async () => {
+  test.skip('go to calendar', async ({ page }) => {
     await global.goToPage('https://test.churchofjesuschrist.org/calendar');
+    await page.fill('#okta-signin-username', 'autoUser');
+    await page.fill("input[type='password']", 'ccdcale8');
+    await page.click('.button');
     await global.verifyUrl(/.*calendar/);
   });
 });

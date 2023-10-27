@@ -11,13 +11,14 @@
     "test:smoke": "npx playwright test tests-examples/ --grep @smoke --project=chromium",
     "test:non-smoke": "npx playwright test tests-examples/ --grep-invert @smoke --project=firefox",
     "example": "npx playwright test tests/example.spec.ts",
-    "example2": "npx playwright test tests/example2.spec.ts"
+    "example2": "npx playwright test tests/example2.spec.ts",
+    "example3": "npx playwright test tests/example3.spec.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@applitools/eyes-playwright": "^1.17.0",
+    "@applitools/eyes-playwright": "^1.22.2",
     "@playwright/test": "^1.39.0",
     "@types/node": "^20.8.7",
     "dotenv": "^16.0.3"
